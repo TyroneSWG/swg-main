@@ -31,9 +31,9 @@ fi
 
 cd ~/swg-main/dependencies
 # install java
-tar -xvzf jdk-8u152-linux-i586.tar.gz
-sudo mv jdk1.8.0_152/ /opt
-sudo ln -s /opt/jdk1.8.0_152 /usr/java
+#tar -xvzf jdk-8u152-linux-i586.tar.gz
+#sudo mv jdk1.8.0_152/ /opt
+#sudo ln -s /opt/jdk1.8.0_152 /usr/java
 
 # nuke old versions
 sudo rm -rf /usr/lib/oracle &> /dev/null
@@ -60,8 +60,8 @@ export JAVA_HOME=/usr/java
 cd $basedir;
 
 # Set java include paths - you want to change these to something like the below for oracle
-sudo cp utils/init/java_ldsoconfd_example.conf /etc/ld.so.conf.d/java.conf
-sudo cp utils/init/java_profile_example.sh /etc/profile.d/java.sh
+#sudo cp utils/init/java_ldsoconfd_example.conf /etc/ld.so.conf.d/java.conf
+#sudo cp utils/init/java_profile_example.sh /etc/profile.d/java.sh
 
 echo "/usr/lib/oracle/12.2/client/lib" | sudo tee -a /etc/ld.so.conf.d/oracle.conf
 
